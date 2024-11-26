@@ -16,16 +16,17 @@ with open('grades.txt', mode='w') as grades:
 
 Exercise 9.2: 
 with open('grades.txt', mode='r') as grades:
-    print(f'{'Student No.':<15}{'Student Name':<15}{'Grade':>10}')
+    print(f'{'Student No.':<20}{'Student Name':<20}{'Grade':>10}')
     count = 0
     total_score = 0.00
     for student in grades:
         count += 1
         student_number, student_name, grade = student.split()
-        print(f'{student_number:<15}{student_name:<15}{grade:>10}')
+        print(f'{student_number:<20}{student_name:<20}{grade:>10}')
         grade_score = float(grade)
         total_score += grade_score
     avg_score = total_score / count
-    print(f'{'Total of Grades':<15}{'No. of Students':<15}{'Avg Grade':>10}')
-    print(f'{total_score:<15.2f}{count:<15}{avg_score:>10.2f}')
+    print('\n')
+    print(f'{'Total of Grades':<20}{'No. of Students':<20}{'Avg Grade':>10}')
+    print(f'{total_score:<20.2f}{count:<20}{avg_score:>10.2f}')
     
